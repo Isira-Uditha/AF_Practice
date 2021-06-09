@@ -18,6 +18,7 @@ const getAllVehicles = async (req, res) => {
     await Vehicle.find({})
         .populate('categories', 'category')
         .then(data => {
+            console.log(data);
             res.status(200).send({ data: data });
         })
         .catch(error => {

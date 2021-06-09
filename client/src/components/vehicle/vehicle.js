@@ -15,8 +15,11 @@ class Vehicle extends Component{
         axios.get('http://localhost:8085/vehicle/')
             .then(response => {
                 this.setState({ vehicles: response.data.data });
+                console.log(this.state.vehicles);
+
             })
     }
+
 
     render(){
         return (
